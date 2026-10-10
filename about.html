@@ -5,10 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Group 1</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/layout.js"></script>
 </head>
 <body>
-  <header id="site-header"></header>
+  <header id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Group 1 home">
+        <span class="logo-mark" aria-hidden="true">G1</span>
+        <span class="logo-text">Group 1</span>
+      </a>
+      <input type="checkbox" id="nav-check" class="nav-check" aria-label="Toggle navigation">
+      <label class="nav-toggle" for="nav-check" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html" aria-current="page" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="container about">
     <h1>About Us</h1>
@@ -129,6 +147,17 @@
     </section>
   </main>
 
-  <footer id="site-footer"></footer>
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><strong>Group 1</strong> &mdash; Meet the team.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Group 1. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

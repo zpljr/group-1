@@ -5,31 +5,407 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Group 1</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/layout.js"></script>
-  <script src="js/members.js"></script>
-  <script src="js/gallery.js"></script>
 </head>
 <body>
-  <header id="site-header"></header>
+  <header id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Group 1 home">
+        <span class="logo-mark" aria-hidden="true">G1</span>
+        <span class="logo-text">Group 1</span>
+      </a>
+      <input type="checkbox" id="nav-check" class="nav-check" aria-label="Toggle navigation">
+      <label class="nav-toggle" for="nav-check" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" aria-current="page" class="active">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <h1>Gallery</h1>
     <p class="page-lead">Moments from our members, activities, projects and events.</p>
 
-    <div id="gallery-filters" class="gallery-filters" role="group" aria-label="Filter photos"></div>
-    <div id="gallery-grid" class="gallery-grid"></div>
+    <div class="gallery-wrap">
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-all" checked>
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-members">
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-activities">
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-projects">
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-events">
+      <input class="filter-radio" type="radio" name="gallery-filter" id="f-moments">
 
-    <dialog id="lightbox" class="lightbox" aria-label="Photo viewer">
-      <button id="lightbox-close" class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
-      <button id="lightbox-prev" class="lb-btn lb-prev" type="button" aria-label="Previous photo">&#10094;</button>
-      <figure>
-        <img id="lightbox-img" src="" alt="">
-        <figcaption id="lightbox-caption"></figcaption>
-      </figure>
-      <button id="lightbox-next" class="lb-btn lb-next" type="button" aria-label="Next photo">&#10095;</button>
-    </dialog>
+      <div id="gallery-filters" class="gallery-filters" role="group" aria-label="Filter photos">
+        <label class="filter-btn" for="f-all">All</label>
+        <label class="filter-btn" for="f-members">Members</label>
+        <label class="filter-btn" for="f-activities">Group Activities</label>
+        <label class="filter-btn" for="f-projects">School Projects</label>
+        <label class="filter-btn" for="f-events">Events</label>
+        <label class="filter-btn" for="f-moments">Memorable Moments</label>
+      </div>
+
+      <div id="gallery-grid" class="gallery-grid">
+        <figure class="gallery-item" id="g-1" data-category="members">
+          <a class="gallery-thumb" href="#lb-1" aria-label="View larger: Member Name 1">
+            <img src="images/placeholder.svg" alt="Member Name 1" loading="lazy">
+          </a>
+          <figcaption>Member Name 1</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-2" data-category="members">
+          <a class="gallery-thumb" href="#lb-2" aria-label="View larger: Member Name 2">
+            <img src="images/placeholder.svg" alt="Member Name 2" loading="lazy">
+          </a>
+          <figcaption>Member Name 2</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-3" data-category="members">
+          <a class="gallery-thumb" href="#lb-3" aria-label="View larger: Member Name 3">
+            <img src="images/placeholder.svg" alt="Member Name 3" loading="lazy">
+          </a>
+          <figcaption>Member Name 3</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-4" data-category="members">
+          <a class="gallery-thumb" href="#lb-4" aria-label="View larger: Member Name 4">
+            <img src="images/placeholder.svg" alt="Member Name 4" loading="lazy">
+          </a>
+          <figcaption>Member Name 4</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-5" data-category="members">
+          <a class="gallery-thumb" href="#lb-5" aria-label="View larger: Member Name 5">
+            <img src="images/placeholder.svg" alt="Member Name 5" loading="lazy">
+          </a>
+          <figcaption>Member Name 5</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-6" data-category="activities">
+          <a class="gallery-thumb" href="#lb-6" aria-label="View larger: Group activity 1 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Group activity 1 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Group activity 1 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-7" data-category="activities">
+          <a class="gallery-thumb" href="#lb-7" aria-label="View larger: Group activity 2 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Group activity 2 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Group activity 2 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-8" data-category="activities">
+          <a class="gallery-thumb" href="#lb-8" aria-label="View larger: Group activity 3 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Group activity 3 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Group activity 3 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-9" data-category="projects">
+          <a class="gallery-thumb" href="#lb-9" aria-label="View larger: School project 1 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="School project 1 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>School project 1 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-10" data-category="projects">
+          <a class="gallery-thumb" href="#lb-10" aria-label="View larger: School project 2 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="School project 2 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>School project 2 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-11" data-category="projects">
+          <a class="gallery-thumb" href="#lb-11" aria-label="View larger: School project 3 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="School project 3 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>School project 3 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-12" data-category="events">
+          <a class="gallery-thumb" href="#lb-12" aria-label="View larger: Event 1 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Event 1 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Event 1 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-13" data-category="events">
+          <a class="gallery-thumb" href="#lb-13" aria-label="View larger: Event 2 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Event 2 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Event 2 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-14" data-category="events">
+          <a class="gallery-thumb" href="#lb-14" aria-label="View larger: Event 3 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Event 3 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Event 3 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-15" data-category="moments">
+          <a class="gallery-thumb" href="#lb-15" aria-label="View larger: Memorable moment 1 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 1 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Memorable moment 1 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-16" data-category="moments">
+          <a class="gallery-thumb" href="#lb-16" aria-label="View larger: Memorable moment 2 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 2 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Memorable moment 2 - short description placeholder.</figcaption>
+        </figure>
+        <figure class="gallery-item" id="g-17" data-category="moments">
+          <a class="gallery-thumb" href="#lb-17" aria-label="View larger: Memorable moment 3 - short description placeholder.">
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 3 - short description placeholder." loading="lazy">
+          </a>
+          <figcaption>Memorable moment 3 - short description placeholder.</figcaption>
+        </figure>
+      </div>
+
+      <div id="lb-1" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-1" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-1" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-17" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-5" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder.svg" alt="Member Name 1" loading="lazy">
+            <figcaption>Member Name 1</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-2" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-2" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-2" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-2" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-2" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-1" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-1" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder.svg" alt="Member Name 2" loading="lazy">
+            <figcaption>Member Name 2</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-3" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-3" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-3" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-3" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-3" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-2" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-2" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder.svg" alt="Member Name 3" loading="lazy">
+            <figcaption>Member Name 3</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-4" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-4" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-4" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-4" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-4" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-3" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-3" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder.svg" alt="Member Name 4" loading="lazy">
+            <figcaption>Member Name 4</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-5" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-5" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-5" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-5" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-5" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-4" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-4" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder.svg" alt="Member Name 5" loading="lazy">
+            <figcaption>Member Name 5</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-6" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-1" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-6" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-6" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-6" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-5" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-8" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Group activity 1 - short description placeholder." loading="lazy">
+            <figcaption>Group activity 1 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-7" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-7" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-7" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-7" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-7" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-6" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-6" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Group activity 2 - short description placeholder." loading="lazy">
+            <figcaption>Group activity 2 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-8" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-8" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-8" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-8" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-8" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-7" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-7" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Group activity 3 - short description placeholder." loading="lazy">
+            <figcaption>Group activity 3 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-9" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-6" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-9" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-9" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-9" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-8" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-11" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="School project 1 - short description placeholder." loading="lazy">
+            <figcaption>School project 1 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-10" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-10" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-10" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-10" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-10" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-9" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-9" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="School project 2 - short description placeholder." loading="lazy">
+            <figcaption>School project 2 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-11" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-11" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-11" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-11" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-11" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-10" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-10" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="School project 3 - short description placeholder." loading="lazy">
+            <figcaption>School project 3 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-12" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-9" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-12" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-12" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-12" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-11" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-14" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Event 1 - short description placeholder." loading="lazy">
+            <figcaption>Event 1 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-13" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-13" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-13" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-13" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-13" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-12" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-12" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Event 2 - short description placeholder." loading="lazy">
+            <figcaption>Event 2 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-14" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-14" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-14" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-14" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-14" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-13" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-13" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Event 3 - short description placeholder." loading="lazy">
+            <figcaption>Event 3 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-15" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-12" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-15" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-15" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-15" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-14" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-17" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 1 - short description placeholder." loading="lazy">
+            <figcaption>Memorable moment 1 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-16" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-16" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-16" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-16" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-16" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-15" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-15" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 2 - short description placeholder." loading="lazy">
+            <figcaption>Memorable moment 2 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-17" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-17" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+      <div id="lb-17" class="lightbox" role="dialog" aria-label="Photo viewer">
+        <a class="lb-backdrop" href="#g-17" aria-label="Close"></a>
+        <div class="lb-panel">
+          <a class="lb-btn lb-close" href="#g-17" aria-label="Close">&times;</a>
+          <a class="lb-btn lb-prev lb-all" href="#lb-16" aria-label="Previous photo">&#10094;</a>
+          <a class="lb-btn lb-prev lb-cat" href="#lb-16" aria-label="Previous photo">&#10094;</a>
+          <figure>
+            <img src="images/placeholder-wide.svg" alt="Memorable moment 3 - short description placeholder." loading="lazy">
+            <figcaption>Memorable moment 3 - short description placeholder.</figcaption>
+          </figure>
+          <a class="lb-btn lb-next lb-all" href="#lb-1" aria-label="Next photo">&#10095;</a>
+          <a class="lb-btn lb-next lb-cat" href="#lb-15" aria-label="Next photo">&#10095;</a>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer id="site-footer"></footer>
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><strong>Group 1</strong> &mdash; Meet the team.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Group 1. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

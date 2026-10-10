@@ -5,48 +5,276 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile | Group 1</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/layout.js"></script>
-  <script src="js/members.js"></script>
-  <script src="js/profile.js"></script>
 </head>
 <body>
-  <header id="site-header"></header>
+  <header id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Group 1 home">
+        <span class="logo-mark" aria-hidden="true">G1</span>
+        <span class="logo-text">Group 1</span>
+      </a>
+      <input type="checkbox" id="nav-check" class="nav-check" aria-label="Toggle navigation">
+      <label class="nav-toggle" for="nav-check" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <a class="back-link" href="index.html#members">&larr; Back to members</a>
 
-    <article id="profile" class="profile">
+    <p class="profile-missing">Member not found. <a href="index.html#members">Back to members</a></p>
+
+    <article id="member-1" class="profile">
       <div class="profile-side">
-        <img id="profile-photo" src="images/placeholder.svg" alt="Member photo">
+        <img src="images/placeholder.svg" alt="Photo of Member Name 1">
       </div>
 
       <div class="profile-body">
-        <h1 id="profile-name">Full Name</h1>
-        <p id="profile-role" class="profile-role"></p>
+        <h1>Member Name 1</h1>
+        <p class="profile-role">Role / Title</p>
 
         <section>
           <h2>About Me</h2>
-          <p id="profile-intro"></p>
+          <p>Short self-introduction placeholder. Replace with a few sentences about this member.</p>
         </section>
 
         <section>
           <h2>Hobbies &amp; Interests</h2>
-          <ul id="profile-hobbies" class="tag-list"></ul>
+          <ul class="tag-list">
+            <li>Hobby 1</li>
+            <li>Hobby 2</li>
+            <li>Hobby 3</li>
+          </ul>
         </section>
 
         <section>
           <h2>Skills &amp; Talents</h2>
-          <ul id="profile-skills" class="tag-list"></ul>
+          <ul class="tag-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
         </section>
 
         <section>
           <h2>Other Information</h2>
-          <dl id="profile-other" class="info-list"></dl>
+          <dl class="info-list">
+            <dt>Email</dt>
+            <dd>member1@example.com</dd>
+            <dt>Location</dt>
+            <dd>City, Country</dd>
+            <dt>Favorite Quote</dt>
+            <dd>Placeholder quote.</dd>
+          </dl>
+        </section>
+      </div>
+    </article>
+
+    <article id="member-2" class="profile">
+      <div class="profile-side">
+        <img src="images/placeholder.svg" alt="Photo of Member Name 2">
+      </div>
+
+      <div class="profile-body">
+        <h1>Member Name 2</h1>
+        <p class="profile-role">Role / Title</p>
+
+        <section>
+          <h2>About Me</h2>
+          <p>Short self-introduction placeholder. Replace with a few sentences about this member.</p>
+        </section>
+
+        <section>
+          <h2>Hobbies &amp; Interests</h2>
+          <ul class="tag-list">
+            <li>Hobby 1</li>
+            <li>Hobby 2</li>
+            <li>Hobby 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Skills &amp; Talents</h2>
+          <ul class="tag-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Other Information</h2>
+          <dl class="info-list">
+            <dt>Email</dt>
+            <dd>member2@example.com</dd>
+            <dt>Location</dt>
+            <dd>City, Country</dd>
+            <dt>Favorite Quote</dt>
+            <dd>Placeholder quote.</dd>
+          </dl>
+        </section>
+      </div>
+    </article>
+
+    <article id="member-3" class="profile">
+      <div class="profile-side">
+        <img src="images/placeholder.svg" alt="Photo of Member Name 3">
+      </div>
+
+      <div class="profile-body">
+        <h1>Member Name 3</h1>
+        <p class="profile-role">Role / Title</p>
+
+        <section>
+          <h2>About Me</h2>
+          <p>Short self-introduction placeholder. Replace with a few sentences about this member.</p>
+        </section>
+
+        <section>
+          <h2>Hobbies &amp; Interests</h2>
+          <ul class="tag-list">
+            <li>Hobby 1</li>
+            <li>Hobby 2</li>
+            <li>Hobby 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Skills &amp; Talents</h2>
+          <ul class="tag-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Other Information</h2>
+          <dl class="info-list">
+            <dt>Email</dt>
+            <dd>member3@example.com</dd>
+            <dt>Location</dt>
+            <dd>City, Country</dd>
+            <dt>Favorite Quote</dt>
+            <dd>Placeholder quote.</dd>
+          </dl>
+        </section>
+      </div>
+    </article>
+
+    <article id="member-4" class="profile">
+      <div class="profile-side">
+        <img src="images/placeholder.svg" alt="Photo of Member Name 4">
+      </div>
+
+      <div class="profile-body">
+        <h1>Member Name 4</h1>
+        <p class="profile-role">Role / Title</p>
+
+        <section>
+          <h2>About Me</h2>
+          <p>Short self-introduction placeholder. Replace with a few sentences about this member.</p>
+        </section>
+
+        <section>
+          <h2>Hobbies &amp; Interests</h2>
+          <ul class="tag-list">
+            <li>Hobby 1</li>
+            <li>Hobby 2</li>
+            <li>Hobby 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Skills &amp; Talents</h2>
+          <ul class="tag-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Other Information</h2>
+          <dl class="info-list">
+            <dt>Email</dt>
+            <dd>member4@example.com</dd>
+            <dt>Location</dt>
+            <dd>City, Country</dd>
+            <dt>Favorite Quote</dt>
+            <dd>Placeholder quote.</dd>
+          </dl>
+        </section>
+      </div>
+    </article>
+
+    <article id="member-5" class="profile">
+      <div class="profile-side">
+        <img src="images/placeholder.svg" alt="Photo of Member Name 5">
+      </div>
+
+      <div class="profile-body">
+        <h1>Member Name 5</h1>
+        <p class="profile-role">Role / Title</p>
+
+        <section>
+          <h2>About Me</h2>
+          <p>Short self-introduction placeholder. Replace with a few sentences about this member.</p>
+        </section>
+
+        <section>
+          <h2>Hobbies &amp; Interests</h2>
+          <ul class="tag-list">
+            <li>Hobby 1</li>
+            <li>Hobby 2</li>
+            <li>Hobby 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Skills &amp; Talents</h2>
+          <ul class="tag-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Other Information</h2>
+          <dl class="info-list">
+            <dt>Email</dt>
+            <dd>member5@example.com</dd>
+            <dt>Location</dt>
+            <dd>City, Country</dd>
+            <dt>Favorite Quote</dt>
+            <dd>Placeholder quote.</dd>
+          </dl>
         </section>
       </div>
     </article>
   </main>
 
-  <footer id="site-footer"></footer>
+  <footer id="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><strong>Group 1</strong> &mdash; Meet the team.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Group 1. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
